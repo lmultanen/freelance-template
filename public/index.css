@@ -1,0 +1,141 @@
+* {
+  margin: 0px;
+  max-width: 100%;
+}
+#root {
+  min-height: 100%;
+}
+.nav-buffer {
+  height: 80px;
+}
+@media screen and (max-width: 500px) {
+  .nav-buffer {
+    height: 120px;
+  }
+}
+#navbar {
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+#navbar a {
+  margin: 0.5em;
+  font-size: larger;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 0.25em;
+}
+#navbar .selected {
+  border-bottom: 1px solid white;
+}
+#navbar .selected:after {
+  transform: scaleX(0);
+  transition: transform 0s;
+}
+#navbar .selected:hover:after {
+  transform: scaleX(0);
+}
+#navbar a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  background: #fff;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+#navbar a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+@media screen and (max-width: 500px) {
+  #navbar {
+    height: 120px;
+  }
+  #navbar a {
+    font-size: large;
+  }
+  #navbar .selected {
+    border-bottom: 2px solid white;
+  }
+  #navbar a:after {
+    height: 2px;
+  }
+}
+#about-container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  align-items: center;
+}
+#about-container p {
+  max-width: 75%;
+}
+#about-container h2 {
+  max-width: 90%;
+  text-align: center;
+}
+#contact-page {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  align-items: center;
+}
+#contact-page #contact-img {
+  width: 50%;
+  max-width: 350px;
+}
+#contact-page h2 {
+  text-align: center;
+  margin-right: 1em;
+  margin-left: 1em;
+}
+.contact-container {
+  display: flex;
+  flex-direction: row;
+}
+.contact-container div {
+  margin: 0.5em;
+  display: flex;
+  align-items: center;
+}
+.contact-container div a {
+  margin: 2em;
+}
+.contact-container div a .small-logo {
+  width: 48px;
+  height: auto;
+}
+#home-container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  align-items: center;
+}
+#home-container p {
+  max-width: 75%;
+}
+#home-container h2 {
+  max-width: 90%;
+  text-align: center;
+}
